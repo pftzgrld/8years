@@ -46,16 +46,16 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   border-bottom: 1px solid var(--border);
   background: var(--white);
 }
-.header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
-.header .subtitle { font-size: 12px; color: var(--gray); margin-top: 2px; text-transform: uppercase; letter-spacing: 1px; }
+.header h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+.header .subtitle { font-size: 14px; color: var(--gray); margin-top: 2px; text-transform: uppercase; letter-spacing: 1px; }
 .week-badge {
   display: inline-block;
   background: var(--coral);
   color: white;
   font-family: 'Inter', sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
-  padding: 3px 10px;
+  padding: 5px 14px;
   border-radius: 20px;
   margin-top: 8px;
 }
@@ -73,12 +73,12 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .tab-nav button {
   flex: 1;
-  min-width: 70px;
-  padding: 12px 8px;
+  min-width: 80px;
+  padding: 14px 8px;
   border: none;
   background: none;
   font-family: 'Inter', sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--gray);
   cursor: pointer;
@@ -104,7 +104,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 .card-label {
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--gray);
@@ -112,13 +112,13 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .card-value {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--charcoal);
 }
-.card-value .unit { font-size: 14px; font-weight: 400; color: var(--gray); }
+.card-value .unit { font-size: 16px; font-weight: 400; color: var(--gray); }
 .card-delta {
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 2px;
   font-weight: 500;
 }
@@ -139,23 +139,33 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin-bottom: 12px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
-.chart-container h3 { font-size: 14px; margin-bottom: 12px; }
+.chart-container h3 { font-size: 16px; margin-bottom: 12px; }
 .chart-container canvas { max-height: 200px; }
 
 /* Forms */
 .form-group { margin-bottom: 16px; }
 .form-group label {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--gray);
   margin-bottom: 6px;
 }
+.form-group .label-hint {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--gray);
+  margin-top: 2px;
+  opacity: 0.7;
+}
 .form-group input, .form-group select, .form-group textarea {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border: 1px solid var(--border);
   border-radius: 8px;
   font-family: 'Inter', sans-serif;
@@ -179,12 +189,12 @@ input[type="number"] { -moz-appearance: textfield; }
   flex-wrap: wrap;
 }
 .session-pill {
-  padding: 10px 16px;
+  padding: 14px 20px;
   border: 2px solid var(--border);
   border-radius: 8px;
   background: var(--white);
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.15s;
@@ -205,11 +215,11 @@ input[type="number"] { -moz-appearance: textfield; }
 }
 .exercise-name {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 4px;
 }
 .exercise-target {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--gray);
   margin-bottom: 8px;
 }
@@ -219,12 +229,12 @@ input[type="number"] { -moz-appearance: textfield; }
   align-items: center;
 }
 .set-input {
-  width: 52px;
-  padding: 8px 4px;
+  width: 58px;
+  padding: 12px 6px;
   text-align: center;
   border: 1px solid var(--border);
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Inter', sans-serif;
   background: var(--white);
 }
@@ -247,20 +257,20 @@ input[type="number"] { -moz-appearance: textfield; }
 .supp-toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
+  gap: 10px;
+  padding: 14px 14px;
   background: var(--card);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.15s;
-  font-size: 13px;
+  font-size: 15px;
 }
 .supp-toggle.checked {
   background: var(--green-light);
 }
 .supp-toggle .check {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border: 2px solid var(--border);
   border-radius: 4px;
   display: flex;
@@ -280,25 +290,25 @@ input[type="number"] { -moz-appearance: textfield; }
 .protein-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
+  gap: 10px;
+  padding: 14px 14px;
   background: var(--card);
   border-radius: 8px;
   margin-bottom: 6px;
 }
 .protein-row .prot-label {
   flex: 1;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   min-width: 80px;
 }
 .protein-row input {
-  width: 60px;
-  padding: 8px 4px;
+  width: 64px;
+  padding: 12px 6px;
   text-align: center;
   border: 1px solid var(--border);
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Inter', sans-serif;
   background: var(--white);
   -webkit-appearance: none;
@@ -376,12 +386,12 @@ input[type="number"] { -moz-appearance: textfield; }
   align-items: center;
 }
 .rpe-btn {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 8px;
   background: var(--white);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
@@ -391,11 +401,11 @@ input[type="number"] { -moz-appearance: textfield; }
 /* Buttons */
 .btn {
   width: 100%;
-  padding: 14px;
+  padding: 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s;
@@ -513,7 +523,6 @@ input[type="number"] { -moz-appearance: textfield; }
   <button data-tab="workout">Workout</button>
   <button data-tab="daily">Check-in</button>
   <button data-tab="weekly">Weekly</button>
-  <button data-tab="progress">Progress</button>
 </div>
 
 <!-- DASHBOARD TAB -->
@@ -550,9 +559,43 @@ input[type="number"] { -moz-appearance: textfield; }
     <div class="compliance-bar"><div class="compliance-fill" id="dashCompBar" style="width:0%"></div></div>
   </div>
 
+  <div class="card" id="bioAgeCard" style="background:linear-gradient(135deg, var(--coral-light), var(--green-light));margin-bottom:12px;">
+    <div class="card-label">Estimated Biological Age</div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;">
+      <div class="card-value" id="dashBioAge">—</div>
+      <div id="dashBioAgeDelta" style="font-size:15px;font-weight:600;"></div>
+    </div>
+    <div id="dashBioAgeNote" style="font-size:12px;color:var(--gray);margin-top:4px;"></div>
+  </div>
+
   <div class="chart-container">
     <h3>Weight Trend</h3>
     <canvas id="dashWeightChart"></canvas>
+  </div>
+
+  <div class="chart-container">
+    <h3>Biological Age</h3>
+    <canvas id="dashBioAgeChart"></canvas>
+  </div>
+
+  <div class="chart-container">
+    <h3>VO2 Max</h3>
+    <canvas id="dashVo2Chart"></canvas>
+  </div>
+
+  <div class="chart-container">
+    <h3>Resting Heart Rate</h3>
+    <canvas id="dashHrChart"></canvas>
+  </div>
+
+  <div class="chart-container">
+    <h3>Training Volume</h3>
+    <canvas id="dashVolumeChart"></canvas>
+  </div>
+
+  <div class="card">
+    <div class="card-label">Compliance</div>
+    <div id="dashCompliance" style="margin-top:8px;font-size:14px;"></div>
   </div>
 </div>
 
@@ -620,11 +663,11 @@ input[type="number"] { -moz-appearance: textfield; }
       <input type="number" id="dSteps" placeholder="3500">
     </div>
     <div class="form-group">
-      <label>Sleep (hours)</label>
+      <label>Sleep (hours)<span class="label-hint">Last night</span></label>
       <input type="number" step="0.5" id="dSleep" placeholder="7.5">
     </div>
     <div class="form-group">
-      <label>Sleep Quality (1-10)</label>
+      <label>Sleep Quality (1-10)<span class="label-hint">1=terrible, 5=ok, 7=solid, 10=incredible</span></label>
       <input type="number" min="1" max="10" id="dSleepQ" placeholder="7">
     </div>
   </div>
@@ -735,29 +778,6 @@ input[type="number"] { -moz-appearance: textfield; }
   <button class="btn btn-primary" onclick="submitWeekly()">Save Weekly Review</button>
 </div>
 
-<!-- PROGRESS TAB -->
-<div class="tab-content" id="tab-progress">
-  <div class="chart-container">
-    <h3>Weight Trend</h3>
-    <canvas id="progWeightChart"></canvas>
-  </div>
-  <div class="chart-container">
-    <h3>VO2 Max</h3>
-    <canvas id="progVo2Chart"></canvas>
-  </div>
-  <div class="chart-container">
-    <h3>Resting Heart Rate</h3>
-    <canvas id="progHrChart"></canvas>
-  </div>
-  <div class="chart-container">
-    <h3>Training Volume</h3>
-    <canvas id="progVolumeChart"></canvas>
-  </div>
-  <div class="card">
-    <div class="card-label">Compliance</div>
-    <div id="progCompliance" style="margin-top:8px;font-size:13px;"></div>
-  </div>
-</div>
 
 <div class="toast" id="toast"></div>
 
@@ -872,7 +892,7 @@ const PROGRAM_DATA = {
   }
 };
 
-const SUPPLEMENTS = ["Creatine", "Vitamin D3", "Magnesium", "Algae Omega-3", "Whey Protein"];
+const SUPPLEMENTS = ["Creatine", "Vitamin D3", "Vitamin B12", "Magnesium", "Algae Omega-3", "Whey Protein"];
 
 const PROFILE_DEFAULT = {
   start_date: "2026-02-24",
@@ -944,7 +964,19 @@ function render() {
   renderDashboard();
   renderWorkoutTab();
   renderDailyTab();
-  renderProgressTab();
+}
+
+// --- Biological Age Estimation ---
+// Based on VO2 max research (Jackson et al.): Bio age = 120.4 - (2.01 * VO2max)
+// Modified with resting HR and HRV adjustments
+function estimateBioAge(vo2max, restingHr, hrv, chronoAge) {
+  if (!vo2max) return null;
+  let bioAge = 120.4 - (2.01 * vo2max);
+  // Adjust for resting HR (lower = younger): every 5bpm below 70 = -1 year
+  if (restingHr) bioAge -= Math.max(0, (70 - restingHr) / 5);
+  // Adjust for HRV (higher = younger): every 10ms above 30 = -0.5 year
+  if (hrv) bioAge -= Math.max(0, (hrv - 30) / 20);
+  return Math.round(bioAge);
 }
 
 // --- Header ---
@@ -1027,8 +1059,200 @@ function renderDashboard() {
   }).length;
   document.getElementById('dashStreak').textContent = suppDays > 0 ? `${suppDays}d supplement streak` : '';
 
+  // Bio age card
+  const latestVo2 = latestWeekly && latestWeekly.vo2max ? latestWeekly.vo2max : null;
+  const latestRhr = latestWeekly && latestWeekly.resting_hr ? latestWeekly.resting_hr : null;
+  const latestHrv = latestWeekly && latestWeekly.hrv ? latestWeekly.hrv : null;
+  const bioAge = estimateBioAge(latestVo2, latestRhr, latestHrv, profile.age);
+
+  const bioEl = document.getElementById('dashBioAge');
+  if (bioAge !== null) {
+    bioEl.innerHTML = `${bioAge}<span class="unit"> years</span>`;
+    const diff = profile.age - bioAge;
+    const deltaEl = document.getElementById('dashBioAgeDelta');
+    if (diff > 0) {
+      deltaEl.textContent = `${diff} years younger`;
+      deltaEl.style.color = 'var(--green)';
+    } else if (diff < 0) {
+      deltaEl.textContent = `${Math.abs(diff)} years older`;
+      deltaEl.style.color = 'var(--coral)';
+    } else {
+      deltaEl.textContent = 'Matches chronological age';
+      deltaEl.style.color = 'var(--gray)';
+    }
+    document.getElementById('dashBioAgeNote').textContent = `Based on VO2 max${latestRhr ? ', resting HR' : ''}${latestHrv ? ', HRV' : ''}. Chronological age: ${profile.age}`;
+  } else {
+    bioEl.textContent = '\u2014';
+    document.getElementById('dashBioAgeNote').textContent = 'Log your first weekly review with VO2 max to see this';
+  }
+
   // Weight chart
   renderWeightChart('dashWeightChart', daily, profile);
+
+  // --- Progress charts (merged from Progress tab) ---
+
+  // Bio age chart
+  const bioCtx = document.getElementById('dashBioAgeChart').getContext('2d');
+  if (charts['dashBioAgeChart']) charts['dashBioAgeChart'].destroy();
+  const bioData = weekly.filter(w => w.vo2max).map(w => {
+    const ba = estimateBioAge(w.vo2max, w.resting_hr, w.hrv, profile.age);
+    return { x: `Wk ${w.week_number}`, y: ba };
+  });
+  const chronoLine = bioData.length ? [
+    { x: bioData[0].x, y: profile.age },
+    { x: bioData[bioData.length - 1].x, y: profile.age }
+  ] : [];
+  const targetLine = bioData.length ? [
+    { x: bioData[0].x, y: profile.age - 8 },
+    { x: bioData[bioData.length - 1].x, y: profile.age - 8 }
+  ] : [];
+  charts['dashBioAgeChart'] = new Chart(bioCtx, {
+    type: 'line',
+    data: {
+      datasets: [{
+        label: 'Bio Age',
+        data: bioData,
+        borderColor: '#EB4233',
+        backgroundColor: 'rgba(235,66,51,0.1)',
+        borderWidth: 3,
+        pointRadius: 5,
+        pointBackgroundColor: '#EB4233',
+        fill: true,
+        tension: 0.3
+      }, {
+        label: 'Actual Age',
+        data: chronoLine,
+        borderColor: 'var(--gray)',
+        borderWidth: 1,
+        borderDash: [5, 5],
+        pointRadius: 0,
+        fill: false
+      }, {
+        label: 'Target (-8 yrs)',
+        data: targetLine,
+        borderColor: '#21C45D',
+        borderWidth: 1,
+        borderDash: [5, 5],
+        pointRadius: 0,
+        fill: false
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: { type: 'category', ticks: { font: { size: 11 } } },
+        y: { reverse: true, min: profile.age - 12, max: profile.age + 2, ticks: { font: { size: 11 } } }
+      },
+      plugins: { legend: { display: true, labels: { font: { size: 11 } } } }
+    }
+  });
+
+  // VO2 Max chart
+  const vo2Ctx = document.getElementById('dashVo2Chart').getContext('2d');
+  if (charts['dashVo2Chart']) charts['dashVo2Chart'].destroy();
+  const vo2Data = weekly.filter(w => w.vo2max).map(w => ({ x: `Wk ${w.week_number}`, y: w.vo2max }));
+  charts['dashVo2Chart'] = new Chart(vo2Ctx, {
+    type: 'line',
+    data: {
+      datasets: [{
+        label: 'VO2 Max',
+        data: vo2Data,
+        borderColor: '#EB4233',
+        backgroundColor: 'rgba(235,66,51,0.1)',
+        borderWidth: 2,
+        pointRadius: 4,
+        pointBackgroundColor: '#EB4233',
+        fill: true,
+        tension: 0.3
+      }, {
+        label: 'Target',
+        data: vo2Data.length ? [{ x: vo2Data[0].x, y: 42 }, { x: vo2Data[vo2Data.length - 1].x, y: 42 }] : [],
+        borderColor: '#21C45D',
+        borderWidth: 1,
+        borderDash: [5, 5],
+        pointRadius: 0,
+        fill: false
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: { type: 'category', ticks: { font: { size: 11 } } },
+        y: { min: 35, max: 45, ticks: { font: { size: 11 } } }
+      },
+      plugins: { legend: { display: false } }
+    }
+  });
+
+  // Resting HR chart
+  const hrChartCtx = document.getElementById('dashHrChart').getContext('2d');
+  if (charts['dashHrChart']) charts['dashHrChart'].destroy();
+  const hrChartData = weekly.filter(w => w.resting_hr).map(w => ({ x: `Wk ${w.week_number}`, y: w.resting_hr }));
+  charts['dashHrChart'] = new Chart(hrChartCtx, {
+    type: 'line',
+    data: {
+      datasets: [{
+        label: 'Resting HR',
+        data: hrChartData,
+        borderColor: '#EB4233',
+        borderWidth: 2,
+        pointRadius: 4,
+        pointBackgroundColor: '#EB4233',
+        fill: false,
+        tension: 0.3
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: { type: 'category', ticks: { font: { size: 11 } } },
+        y: { ticks: { font: { size: 11 } } }
+      },
+      plugins: { legend: { display: false } }
+    }
+  });
+
+  // Training volume chart
+  const volCtx = document.getElementById('dashVolumeChart').getContext('2d');
+  if (charts['dashVolumeChart']) charts['dashVolumeChart'].destroy();
+  const volData = DATA.workouts.filter(w => w.exercises && w.exercises.length > 0).map(w => {
+    const vol = w.exercises.reduce((sum, ex) => {
+      return sum + ex.sets.reduce((s, set) => s + (set.reps * set.weight), 0);
+    }, 0);
+    return { x: w.date, y: Math.round(vol) };
+  });
+  charts['dashVolumeChart'] = new Chart(volCtx, {
+    type: 'bar',
+    data: {
+      datasets: [{
+        label: 'Volume (kg\u00d7reps)',
+        data: volData,
+        backgroundColor: 'rgba(235,66,51,0.6)',
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: { type: 'category', ticks: { font: { size: 11 } } },
+        y: { ticks: { font: { size: 11 } } }
+      },
+      plugins: { legend: { display: false } }
+    }
+  });
+
+  // Compliance stats
+  const totalWorkouts = DATA.workouts.length;
+  const totalDays = Math.max(1, 56 - c.days_remaining);
+  const totalWeeks = Math.max(1, c.current_week);
+  const expectedSessions = totalWeeks <= 4 ? totalWeeks * 4 : (4 * 4) + ((totalWeeks - 4) * 5);
+
+  const compEl = document.getElementById('dashCompliance');
+  compEl.innerHTML = `
+    <div style="margin-bottom:6px;"><strong>Sessions:</strong> ${totalWorkouts}/${expectedSessions} (${Math.round(totalWorkouts/Math.max(1,expectedSessions)*100)}%)</div>
+    <div style="margin-bottom:6px;"><strong>Daily check-ins:</strong> ${DATA.daily.length}/${totalDays} days</div>
+    <div><strong>Weekly reviews:</strong> ${DATA.weekly.length}/${totalWeeks} weeks</div>
+  `;
 }
 
 function renderWeightChart(canvasId, daily, profile) {
@@ -1388,129 +1612,10 @@ async function submitWeekly() {
   switchTab('dashboard');
 }
 
-// --- Progress Tab ---
-function renderProgressTab() {
-  const daily = DATA.daily;
-  const weekly = DATA.weekly;
-  const profile = DATA.profile;
-
-  // Weight chart (same as dashboard but potentially larger)
-  renderWeightChart('progWeightChart', daily, profile);
-
-  // VO2 Max chart
-  const vo2Ctx = document.getElementById('progVo2Chart').getContext('2d');
-  if (charts['progVo2Chart']) charts['progVo2Chart'].destroy();
-  const vo2Data = weekly.filter(w => w.vo2max).map(w => ({ x: `Wk ${w.week_number}`, y: w.vo2max }));
-  charts['progVo2Chart'] = new Chart(vo2Ctx, {
-    type: 'line',
-    data: {
-      datasets: [{
-        label: 'VO2 Max',
-        data: vo2Data,
-        borderColor: '#EB4233',
-        backgroundColor: 'rgba(235,66,51,0.1)',
-        borderWidth: 2,
-        pointRadius: 4,
-        pointBackgroundColor: '#EB4233',
-        fill: true,
-        tension: 0.3
-      }, {
-        label: 'Target',
-        data: vo2Data.length ? [{ x: vo2Data[0].x, y: 42 }, { x: vo2Data[vo2Data.length - 1].x, y: 42 }] : [],
-        borderColor: '#21C45D',
-        borderWidth: 1,
-        borderDash: [5, 5],
-        pointRadius: 0,
-        fill: false
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        x: { type: 'category', ticks: { font: { size: 10 } } },
-        y: { min: 35, max: 45, ticks: { font: { size: 10 } } }
-      },
-      plugins: { legend: { display: false } }
-    }
-  });
-
-  // Resting HR chart
-  const hrCtx = document.getElementById('progHrChart').getContext('2d');
-  if (charts['progHrChart']) charts['progHrChart'].destroy();
-  const hrData = weekly.filter(w => w.resting_hr).map(w => ({ x: `Wk ${w.week_number}`, y: w.resting_hr }));
-  charts['progHrChart'] = new Chart(hrCtx, {
-    type: 'line',
-    data: {
-      datasets: [{
-        label: 'Resting HR',
-        data: hrData,
-        borderColor: '#EB4233',
-        borderWidth: 2,
-        pointRadius: 4,
-        pointBackgroundColor: '#EB4233',
-        fill: false,
-        tension: 0.3
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        x: { type: 'category', ticks: { font: { size: 10 } } },
-        y: { ticks: { font: { size: 10 } } }
-      },
-      plugins: { legend: { display: false } }
-    }
-  });
-
-  // Training volume chart (total weight x reps per session)
-  const volCtx = document.getElementById('progVolumeChart').getContext('2d');
-  if (charts['progVolumeChart']) charts['progVolumeChart'].destroy();
-  const volData = DATA.workouts.filter(w => w.exercises && w.exercises.length > 0).map(w => {
-    const vol = w.exercises.reduce((sum, ex) => {
-      return sum + ex.sets.reduce((s, set) => s + (set.reps * set.weight), 0);
-    }, 0);
-    return { x: w.date, y: Math.round(vol) };
-  });
-  charts['progVolumeChart'] = new Chart(volCtx, {
-    type: 'bar',
-    data: {
-      datasets: [{
-        label: 'Volume (kg\u00d7reps)',
-        data: volData,
-        backgroundColor: 'rgba(235,66,51,0.6)',
-        borderRadius: 4
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        x: { type: 'category', ticks: { font: { size: 10 } } },
-        y: { ticks: { font: { size: 10 } } }
-      },
-      plugins: { legend: { display: false } }
-    }
-  });
-
-  // Compliance stats
-  const totalWorkouts = DATA.workouts.length;
-  const c = DATA._computed;
-  const totalDays = Math.max(1, 56 - c.days_remaining);
-  const totalWeeks = Math.max(1, c.current_week);
-  const expectedSessions = totalWeeks <= 4 ? totalWeeks * 4 : (4 * 4) + ((totalWeeks - 4) * 5);
-
-  const compEl = document.getElementById('progCompliance');
-  compEl.innerHTML = `
-    <div style="margin-bottom:6px;"><strong>Sessions:</strong> ${totalWorkouts}/${expectedSessions} (${Math.round(totalWorkouts/Math.max(1,expectedSessions)*100)}%)</div>
-    <div style="margin-bottom:6px;"><strong>Daily check-ins:</strong> ${DATA.daily.length}/${totalDays} days</div>
-    <div><strong>Weekly reviews:</strong> ${DATA.weekly.length}/${totalWeeks} weeks</div>
-  `;
-}
-
 // --- Tab Navigation ---
 function switchTab(tabId) {
   document.querySelectorAll('.tab-nav button').forEach(b => b.classList.toggle('active', b.dataset.tab === tabId));
   document.querySelectorAll('.tab-content').forEach(t => t.classList.toggle('active', t.id === 'tab-' + tabId));
-  if (tabId === 'progress') renderProgressTab();
 }
 
 document.querySelectorAll('.tab-nav button').forEach(btn => {

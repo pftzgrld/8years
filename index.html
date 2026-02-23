@@ -559,6 +559,15 @@ input[type="number"] { -moz-appearance: textfield; }
     <div class="compliance-bar"><div class="compliance-fill" id="dashCompBar" style="width:0%"></div></div>
   </div>
 
+  <div class="card">
+    <div class="card-label">Today's Steps</div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;">
+      <div class="card-value" id="dashSteps">—</div>
+      <div style="font-size:13px;color:var(--gray);" id="dashStepsTarget">Target: 7,000</div>
+    </div>
+    <div class="compliance-bar"><div class="compliance-fill" id="dashStepsBar" style="width:0%;background:var(--coral);"></div></div>
+  </div>
+
   <div class="card" id="bioAgeCard" style="background:linear-gradient(135deg, var(--coral-light), var(--green-light));margin-bottom:12px;">
     <div class="card-label">Estimated Biological Age</div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;">
@@ -805,7 +814,7 @@ const PROGRAM_DATA = {
         { "name": "Cable Tricep Pushdown", "sets": 3, "reps": 12, "target_weight": 19, "notes": "Down from peak 23kg" },
         { "name": "Tricep Dips", "sets": 2, "reps": 10, "target_weight": 0, "notes": "Bodyweight \u2014 may need assisted at first" }
       ],
-      "cardio": { "type": "Zone 2", "duration_min": 20, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
+      "cardio": { "type": "Zone 2", "duration_min": 30, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
     },
     "B": {
       "name": "Lower Body + Zone 2",
@@ -816,7 +825,7 @@ const PROGRAM_DATA = {
         { "name": "Hamstring Curls", "sets": 3, "reps": 10, "target_weight": 42.5, "notes": "Down from peak 52kg" },
         { "name": "Standing Calf Raises", "sets": 3, "reps": 15, "target_weight": 15, "notes": "BW + DB, one hand on wall" }
       ],
-      "cardio": { "type": "Zone 2", "duration_min": 20, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
+      "cardio": { "type": "Zone 2", "duration_min": 30, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
     },
     "C": {
       "name": "Upper Pull + Zone 2",
@@ -827,7 +836,7 @@ const PROGRAM_DATA = {
         { "name": "Face Pulls", "sets": 3, "reps": 15, "target_weight": 13, "notes": "Rear delt health" },
         { "name": "Hammer Curls", "sets": 3, "reps": 10, "target_weight": 10, "notes": "Per hand. Down from peak 12.5kg" }
       ],
-      "cardio": { "type": "Zone 2", "duration_min": 20, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
+      "cardio": { "type": "Zone 2", "duration_min": 30, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
     },
     "D": {
       "name": "Interval Cardio (VO2 Max Focus)",
@@ -847,7 +856,7 @@ const PROGRAM_DATA = {
         { "name": "Cable Tricep Pushdown", "sets": 3, "reps": 12, "target_weight": 23.5, "notes": "" },
         { "name": "Tricep Dips", "sets": 3, "reps": 12, "target_weight": 0, "notes": "Bodyweight" }
       ],
-      "cardio": { "type": "Zone 2", "duration_min": 25, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
+      "cardio": { "type": "Zone 2", "duration_min": 30, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
     },
     "B": {
       "name": "Lower Body + Zone 2",
@@ -859,7 +868,7 @@ const PROGRAM_DATA = {
         { "name": "Hip Thrusts", "sets": 3, "reps": 10, "target_weight": 27.5, "notes": "Reintroduce" },
         { "name": "Standing Calf Raises", "sets": 4, "reps": 15, "target_weight": 20, "notes": "BW + DB" }
       ],
-      "cardio": { "type": "Zone 2", "duration_min": 25, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
+      "cardio": { "type": "Zone 2", "duration_min": 30, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
     },
     "C": {
       "name": "Upper Pull + Zone 2",
@@ -871,7 +880,7 @@ const PROGRAM_DATA = {
         { "name": "Hammer Curls", "sets": 3, "reps": 10, "target_weight": 12.5, "notes": "Per hand" },
         { "name": "Bicep Curls", "sets": 3, "reps": 12, "target_weight": 10, "notes": "Per hand" }
       ],
-      "cardio": { "type": "Zone 2", "duration_min": 25, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
+      "cardio": { "type": "Zone 2", "duration_min": 30, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
     },
     "D": {
       "name": "Interval Cardio (VO2 Max Push)",
@@ -887,7 +896,7 @@ const PROGRAM_DATA = {
         { "name": "DB Bench Row", "sets": 3, "reps": 12, "target_weight": 16, "notes": "Per hand" },
         { "name": "Plank", "sets": 3, "reps": 60, "target_weight": 0, "notes": "Bodyweight. Reps = seconds" }
       ],
-      "cardio": { "type": "Zone 2", "duration_min": 20, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
+      "cardio": { "type": "Zone 2", "duration_min": 30, "hr_target": "125-140 bpm", "modality": "Bike or incline walk" }
     }
   }
 };
@@ -1058,6 +1067,24 @@ function renderDashboard() {
     return vals.length > 0 && vals.every(v => v);
   }).length;
   document.getElementById('dashStreak').textContent = suppDays > 0 ? `${suppDays}d supplement streak` : '';
+
+  // Steps card
+  const today = new Date().toISOString().split('T')[0];
+  const todayEntry = daily.find(d => d.date === today);
+  const todaySteps = todayEntry && todayEntry.steps ? todayEntry.steps : null;
+  const STEP_TARGET = 7000;
+  const stepsEl = document.getElementById('dashSteps');
+  if (todaySteps !== null) {
+    stepsEl.textContent = todaySteps.toLocaleString();
+    const pct = Math.min(100, (todaySteps / STEP_TARGET) * 100);
+    document.getElementById('dashStepsBar').style.width = pct + '%';
+    document.getElementById('dashStepsBar').style.background = pct >= 100 ? 'var(--green)' : 'var(--coral)';
+    document.getElementById('dashStepsTarget').textContent = todaySteps >= STEP_TARGET ? 'Target hit!' : `Target: 7,000`;
+    document.getElementById('dashStepsTarget').style.color = todaySteps >= STEP_TARGET ? 'var(--green)' : 'var(--gray)';
+  } else {
+    stepsEl.textContent = '\u2014';
+    document.getElementById('dashStepsBar').style.width = '0%';
+  }
 
   // Bio age card
   const latestVo2 = latestWeekly && latestWeekly.vo2max ? latestWeekly.vo2max : null;
